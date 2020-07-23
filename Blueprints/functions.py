@@ -82,7 +82,7 @@ def sql_is_admin(email):
 
     id = sql_get_user_by_email(connection, email)
 
-    cur.execute("SELECT adminid FROM admins WHERE adminid = ?", (id,))
+    cur.execute("SELECT adminid FROM admins WHERE adminid = ?", (id))
     result = cur.fetchall()
 
     if not result:
